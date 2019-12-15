@@ -1,0 +1,133 @@
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:61px;
+    background-color:white;
+    border-bottom: solid 2px aqua;
+    padding-bottom: 2px;
+    white-space: nowrap;
+}
+
+.logo{
+    float:left;
+}
+
+
+/*header-left*/
+.header-list{
+    float:left;
+}
+
+.header-list li {
+    display:inline-block;
+    font-size:30px;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.header-list a{
+    text-decoration: none;
+    color: black;
+}
+.header-logo{
+    height:60px;
+}
+
+
+
+/*header-right*/
+.header-right{
+    float:right;
+    max-width:700px;
+    display: none;
+    margin-right:20px;
+}
+.header-right a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+header label {
+    display: block;
+    margin: 0 0 4px 0;
+    padding : 15px;
+    line-height: 1;
+    background :white;
+    cursor :pointer;
+    font-size:30px;
+    text-align: right;
+}
+
+header input {
+    display: none;
+}
+
+.header-right ul {
+    margin: 0;
+    padding: 0;
+    background :#f4f4f4;
+    list-style: none;
+}
+
+.header-right li {
+    font-size:30px;
+    font-weight: bold;
+    text-decoration: none;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#menu_bar01:checked ~ #links01 li {
+    height: 54px;
+    opacity: 1;
+}
+
+/*フッター*/
+.this-page{
+    color: aqua;
+    border-bottom: solid 2px aqua;
+}
+
+footer{
+    color: white;
+    background-color: rgb(70, 70, 70);
+    border-top: solid 2px aqua;
+}
+
+.footer-list{
+    border-top: thin solid rgb(216, 216, 216);
+    border-bottom: thin solid rgb(216, 216, 216);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.footer-list li{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.footer-list a{
+    text-decoration: none;
+    color: white;
+}
+
+.centering{
+    text-align: center;
+    padding-top: 20px;
+}
+@media only screen and (max-width: 1150px) {
+    .header-list {
+        display:none;
+    }
+    .header-right{
+        display:block;
+    }
+}

@@ -1,0 +1,49 @@
+.clear{
+    clear:both;
+}
+.content{
+    width:765px;
+    margin:0 auto;
+}
+.title{
+    height:200px;
+    line-height: 150px;
+    text-align: center;
+    font-size:36px;
+    background-image: url(../../image/title_background.jpg);
+    background-size: 100% 300%;
+    background-position: bottom;
+
+}
+th{
+    text-align: left;
+    background-color: rgb(228, 228, 228);
+    border: solid 0.5px #000000;
+}
+td{
+    border: solid 0.5px #000000;
+}
+th span{
+    background-color:red;
+    color:white;
+}
+table{
+    border: solid 1px #000000;
+    margin:10px 0;
+}
+input.infomation{
+    height:30px;
+    width:60;
+    font-size:17px;
+}
+select.infomation{
+    height:30px;
+    width:60;
+    font-size:17px;
+}
+textarea.infomation{
+    font-size:17px;
+}
+.errormessage{
+    color:red;
+}

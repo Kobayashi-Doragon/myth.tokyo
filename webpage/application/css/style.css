@@ -1,0 +1,39 @@
+
+.clear{
+    clear:both;
+}
+.main{
+    width:100%;
+    font-family: "Meiryo";
+}
+.main a{
+    text-decoration: none;
+    color: blue;
+}
+.linked-item :hover{
+    border-bottom: 1px solid black; 
+}
+/*移動するかも*/
+.title{
+    height:200px;
+    line-height: 150px;
+    text-align: center;
+    font-size:36px;
+    background-image: url(../../image/title_background.jpg);
+    background-size: 100% 300%;
+    background-position: bottom;
+}
+.content{
+    width:765px;
+    margin:0 auto;
+}
+
+.content_text{
+    font-size:17px;
+    line-height: 2;
+    margin :0;
+}
+
+.introduce_icon{
+    float: left;
+}

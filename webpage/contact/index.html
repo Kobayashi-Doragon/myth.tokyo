@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154361562-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154361562-1');
+    </script>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        function check(){
+            var error_count=0;
+            var error_message="";
+            if (form.name.value == ""){
+                //条件に一致する場合(メールアドレスが空の場合)
+                error_count++;
+                error_message="※名前を入力してください";    
+            }
+            if (form.email.value == ""){
+                error_count++;
+                error_message="※メールアドレスを入力してください";    
+            }
+            if (form.content.value == ""){
+                error_count++;
+                error_message="※お問い合わせ内容を入力してください";    
+            }
+
+            if(error_count==0){
+                return true;
+            }
+            else if(error_count==1){
+                alert(error_message);
+                return false;
+            }
+            else{
+                alert("※入力されていない内容が複数あります。");
+                return false; 
+            }
+        }
+    </script>
+    <title>お問い合わせフォーム</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="../index.html"><img src="../image/logo.png" class="header-logo"></a>
+        <ul class="header-list">
+            <li><a href="../transfer/page1/page1.html">編入体験談1</a></li>
+            <li><a href="../transfer/page2/page2.html">編入体験談2</a></li>
+            <li><a href="../application/index.php">webアプリ</a></li>
+            <li><a href="../contact/index.html">お問い合わせ</a></li>
+        </ul>
+        <div class="header-right">
+            <label for="menu_bar01"><i class="fas fa-bars"></i>  </label>
+            <input type="checkbox" id="menu_bar01" class="accordion" />
+            <ul id="links01">
+            <li><a href="../transfer/page1/page1.html">編入体験談1</a></li>
+            <li><a href="../transfer/page2/page2.html">編入体験談2</a></li>
+            <li><a href="../application/index.php">webアプリ</a></li>
+            <li><a href="../contact/index.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="title">
+        <h1>お問い合わせ</h1>
+    </div>
+    <div class="content">
+        <form action="confirm.php" method="post" name="form" onsubmit="return check()">
+            
+            <h2>お問い合わせ内容</h2>
+
+            <table class="formtable" cellpadding="10px" cellspacing="0">
+                <tr >
+                    <th>お名前 <span>必須</span></th>
+                    <td>
+                    <input type="text" name="name" placeholder="例）山田太郎" value="" class="infomation">
+                    </td>
+                </tr>
+                <tr>
+                    <th>職業 </th>
+                    <td>
+                        <select name="job" class="infomation">
+                            <option value="">職業を選択してください</option>
+                            <option value="社会人">社会人</option>
+                            <option value="大学生">大学生</option>
+                            <option value="高専生">高専生</option>
+                            <option value="高校生">高校生</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>メールアドレス <span>必須</span></th>
+                    <td>
+                    <input type="text" name="email" placeholder="例）guest@example.com" value="" class="infomation">
+                    </td>
+                </tr>
+                <tr>
+                    <th>お問い合わせ項目 </th>
+                    <td><select name="item" class="infomation">
+                        <option value="">お問い合わせ項目を選択してください</option>
+                        <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+                        <option value="ご意見・ご感想">ご意見・ご感想</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>お問い合わせ内容 <span>必須</span></th>
+                    <td>
+                    <textarea name="content" rows="10" cols="55"placeholder="お問合せ内容を入力" class="infomation"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit">確認画面へ</button>
+        </form>
+    </div>
+    <footer>
+        <div class="centering">
+            <b>myth.tokyo</b>とはとある学生が勉強用に作ったwebサイトです
+        </div>
+        <ul class="footer-list">
+            <li><a href="../transfer/page1/page1.php">編入体験談1</a></li>
+            <li><a href="../transfer/page2/page2.php">編入体験談2</a></li>
+            <li><a href="../application/index.php">webアプリ</a></li>
+            <li><a href="../contact/index.html">お問い合わせ</a></li>
+        </ul>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
